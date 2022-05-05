@@ -11,16 +11,33 @@ const promptUser = () => {
       type: "input",
       name: "title",
       message: "What is the name of your project?",
+      validate: titleInput => {
+        if (titleInput) {
+          return true;
+        } else {
+          console.log("You need to enter a project name!");
+          return false;
+        }
+      },
     },
     {
       type: "input",
       name: "description",
       message: "Provide a brief description of your project: ",
+      validate: descriptionInput => {
+        if (descriptionInput) {
+          return true;
+        } else {
+          console.log("You need to enter a project description!");
+          return false;
+        }
+      },
     },
     {
       type: "input",
       name: "installation",
       message: "Describe the installation process (if applicable): ",
+      default: false,
     },
     {
       type: "input",
@@ -41,6 +58,7 @@ const promptUser = () => {
   ]);
 };
 
+promptUser();
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
