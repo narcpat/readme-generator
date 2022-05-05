@@ -45,15 +45,29 @@ const promptUser = () => {
       message: "Provide instructions and examples for use: ",
     },
     {
-      type: "input",
-      name: "credits",
-      message: "Please list all contributors: ",
-    },
-    {
       type: "list",
       name: "license",
       message: "Please select the appropriate license for your project: ",
       choices: ["GNU", "MIT", "Mozilla", "Boost", "Apache", "The Unlicense"],
+    },
+    {
+      type: "input",
+      name: "contributing",
+      message: "Please provide guidelines for contributors (optional): ",
+      default: false,
+    },
+    {
+      type: "input",
+      name: "tests",
+      message:
+        "If you have written tests, provide examples on how to run them (optional): ",
+      default: false,
+    },
+    {
+      type: "input",
+      name: "questions",
+      message: "Provide your email address for feedback and inquiries: ",
+      default: false,
     },
   ]);
 };
