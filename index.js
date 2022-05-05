@@ -71,12 +71,25 @@ const promptUser = () =>
       console.log(userAnswers.description);
     });
 
-promptUser();
+// TODO: Create a function to initialize app
+function init() {
+  // Ask user questions and generate the answers
+  promptUser()
+    .then(userAnswers => {
+      return generateContent(userAnswers);
+    })
+    // write the new README to Dist
+    .then(readmePageBuild => {
+      return writeToFile("./dist/README.md", generateContent);
+      console.log("README successfully created");
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
 
 // Function call to initialize app
 init();
