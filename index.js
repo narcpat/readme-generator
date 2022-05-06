@@ -37,6 +37,7 @@ const promptUser = () =>
       type: "input",
       name: "installation",
       message: "Describe the installation process (if applicable): ",
+      default: "N/A",
     },
     {
       type: "input",
@@ -45,20 +46,22 @@ const promptUser = () =>
     },
     {
       type: "list",
-      name: "license",
+      name: "licenseSelected",
       message: "Please select the appropriate license for your project: ",
       choices: ["GNU", "MIT", "Mozilla", "Boost", "Apache", "The Unlicense"],
     },
     {
       type: "input",
       name: "contributing",
-      message: "Please provide guidelines for contributors (optional): ",
+      message:
+        "Please provide info on contributors as well as guidelines for future contributors (optional): ",
     },
     {
       type: "input",
       name: "tests",
       message:
         "If you have written tests, provide examples on how to run them (optional): ",
+      default: "N/A",
     },
     {
       type: "input",

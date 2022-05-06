@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   return `
-  ![badge](https://img.shields.io/github/license/<Github-Username>/<Repository>)
+  ![badge](https://img.shields.io/github/license/${data.licenseSelected})
   `;
 }
 
@@ -16,7 +16,6 @@ function renderLicenseSection(license) {
   if (!license) {
     return "";
   }
-
   return `
     ${renderLicenseBadge}
     ${renderLicenseLink}
@@ -32,6 +31,7 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Content
+
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
@@ -39,23 +39,23 @@ function generateMarkdown(data) {
   - [Tests](#tests)
   - [Questions](#questions)
 
-  ## Installation
+  ## <a name="installation"></a>Installation 
   ${data.installation}
 
-  ## Usage
+  ## <a name="usage"></a>Usage 
   ${data.usage}
 
-  ## License
-  ${renderLicenseSection.license}
+  ## <a name="license"></a>License 
+  ${data.licenseSelected}
 
-  ## Contributing
+  ## <a name="contributing"></a>Contributing 
   ${data.contributing}
 
-  ## Tests
+  ## <a name="tests"></a>Tests 
   ${data.tests}
 
-  ## Questions
-  ${data.questions}
+  ## <a name="questions"></a>Questions 
+  If you have any questions or feedback, please contact me at ${data.questions}
 `;
 }
 
