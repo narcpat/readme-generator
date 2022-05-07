@@ -76,7 +76,10 @@ function init() {
   promptUser()
     .then(readmePageBuild => {
       console.log(readmePageBuild);
-      return writeToFile("./dist/README.md", generateMarkdown(readmePageBuild));
+      return writeToFile(
+        "./output-readme.md",
+        generateMarkdown(readmePageBuild)
+      );
       console.log("README successfully created");
     })
     .catch(err => {
