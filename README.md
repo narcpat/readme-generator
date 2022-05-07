@@ -15,7 +15,7 @@ This is an app that allows you to build a README.md file by simply answering a f
 
 https://github.com/narcpat/readme-generator
 
-![Walkthrough of the app](https://youtu.be/WPi_cN90E64)
+[![Screenshot of App Generator video](https://img.youtube.com/vi/WPi_cN90E64/mq2.jpg)](https://www.youtube.com/watch?v=WPi_cN90E64)
 
 ## Contribution
 
